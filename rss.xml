@@ -8,12 +8,74 @@
     <lastBuildDate>Mon, 16 Jun 2025 12:00:00 +0300</lastBuildDate>
     <pubDate>Mon, 16 Jun 2025 12:00:00 +0300</pubDate>
 
-    <!-- مثال على عنصر واحد -->
     <item>
-      <title>تحميل ملازم الصف السادس العلمي 2025</title>
-      <link>https://ffooaadd.github.io/Mods/#sixth-scientific</link>
-      <description>قم بتحميل ملازم الصف السادس العلمي بصيغة PDF مجاناً.</description>
+      <title>تحميل ملزمة الرياضيات - الصف الثالث المتوسط</title>
+      <link>https://ffooaadd.github.io/Mods/#math-3rd</link>
+      <description>تحميل ملزمة الرياضيات - الصف الثالث المتوسط بصيغة PDF مجاناً.</description>
       <pubDate>Mon, 16 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل ملزمة الأحياء - الصف السادس الإعدادي</title>
+      <link>https://ffooaadd.github.io/Mods/#biology-6th</link>
+      <description>تحميل ملزمة الأحياء - الصف السادس الإعدادي بصيغة PDF مجاناً.</description>
+      <pubDate>Sun, 15 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل كتاب اللغة الإنجليزية - الصف الرابع الإبتدائي</title>
+      <link>https://ffooaadd.github.io/Mods/#english-4th</link>
+      <description>تحميل كتاب اللغة الإنجليزية - الصف الرابع الإبتدائي بصيغة PDF مجاناً.</description>
+      <pubDate>Sat, 14 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل ملزمة الفيزياء - الصف الخامس العلمي</title>
+      <link>https://ffooaadd.github.io/Mods/#physics-5th</link>
+      <description>تحميل ملزمة الفيزياء - الصف الخامس العلمي بصيغة PDF مجاناً.</description>
+      <pubDate>Fri, 13 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل كتاب القواعد - الصف الثاني المتوسط</title>
+      <link>https://ffooaadd.github.io/Mods/#grammar-2nd</link>
+      <description>تحميل كتاب القواعد - الصف الثاني المتوسط بصيغة PDF مجاناً.</description>
+      <pubDate>Thu, 12 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل ملزمة الكيمياء - الصف السادس العلمي</title>
+      <link>https://ffooaadd.github.io/Mods/#chemistry-6th</link>
+      <description>تحميل ملزمة الكيمياء - الصف السادس العلمي بصيغة PDF مجاناً.</description>
+      <pubDate>Wed, 11 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل كتاب التاريخ - الصف الثالث المتوسط</title>
+      <link>https://ffooaadd.github.io/Mods/#history-3rd</link>
+      <description>تحميل كتاب التاريخ - الصف الثالث المتوسط بصيغة PDF مجاناً.</description>
+      <pubDate>Tue, 10 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل ملزمة الجغرافية - الصف الرابع الأدبي</title>
+      <link>https://ffooaadd.github.io/Mods/#geography-4th</link>
+      <description>تحميل ملزمة الجغرافية - الصف الرابع الأدبي بصيغة PDF مجاناً.</description>
+      <pubDate>Mon, 09 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل كتاب العلوم - الصف السادس الإبتدائي</title>
+      <link>https://ffooaadd.github.io/Mods/#science-6th</link>
+      <description>تحميل كتاب العلوم - الصف السادس الإبتدائي بصيغة PDF مجاناً.</description>
+      <pubDate>Sun, 08 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>تحميل ملزمة اللغة العربية - الصف الأول المتوسط</title>
+      <link>https://ffooaadd.github.io/Mods/#arabic-1st</link>
+      <description>تحميل ملزمة اللغة العربية - الصف الأول المتوسط بصيغة PDF مجاناً.</description>
+      <pubDate>Sat, 07 Jun 2025 12:00:00 +0300</pubDate>
     </item>
 
   </channel>
