@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>ملازمي الأفضل</title>
+    <link>https://ffooaadd.github.io/Mods/</link>
+    <description>موقع لتحميل الملازم والكتب المدرسية لجميع الصفوف في العراق</description>
+    <language>ar</language>
+    <lastBuildDate>Mon, 16 Jun 2025 12:00:00 +0300</lastBuildDate>
+    <pubDate>Mon, 16 Jun 2025 12:00:00 +0300</pubDate>
+
+    <!-- مثال على عنصر واحد -->
+    <item>
+      <title>تحميل ملازم الصف السادس العلمي 2025</title>
+      <link>https://ffooaadd.github.io/Mods/#sixth-scientific</link>
+      <description>قم بتحميل ملازم الصف السادس العلمي بصيغة PDF مجاناً.</description>
+      <pubDate>Mon, 16 Jun 2025 12:00:00 +0300</pubDate>
+    </item>
+
+  </channel>
+</rss>
