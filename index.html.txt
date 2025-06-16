@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة التعليم العراقية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #002f6c 0%, #1565c0 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,47,108,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: #4fc3f7;
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .welcome-text {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #e3f2fd;
+        }
+        
+        .welcome-text h2 {
+            color: #002f6c;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .welcome-text h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #2196f3, #4fc3f7);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .welcome-text p {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2196f3, #4fc3f7);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .section-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .section-card:hover {
+            transform: translateY(-10px);
+            border-color: #e3f2fd;
+            box-shadow: 0 20px 40px rgba(33,150,243,0.2);
+        }
+        
+        .section-icon {
+            font-size: 4rem;
+            color: #2196f3;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .section-card h3 {
+            color: #002f6c;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-card p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(33,150,243,0.4);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .levels-section {
+            margin: 60px 0;
+        }
+        
+        .levels-title {
+            text-align: center;
+            color: #002f6c;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .levels-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #2196f3, #4fc3f7);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .level-group {
+            margin-bottom: 50px;
+        }
+        
+        .level-header {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .grades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0;
+            background: white;
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .grade-card {
+            padding: 30px 20px;
+            text-align: center;
+            border-left: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .grade-card:last-child {
+            border-left: none;
+        }
+        
+        .grade-card:hover {
+            background: #f8f9fa;
+            transform: translateY(-5px);
+        }
+        
+        .grade-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2196f3, #4fc3f7);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .grade-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .grade-icon {
+            font-size: 2.5rem;
+            color: #2196f3;
+            margin-bottom: 15px;
+        }
+        
+        .grade-card h4 {
+            color: #002f6c;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .grade-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            background: #002f6c;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+        
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #2196f3;
+            transform: translateY(-3px);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .close {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .close:hover {
+            background: rgba(255,255,255,0.2);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stage-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .stage-card:hover {
+            background: #e3f2fd;
+            border-color: #2196f3;
+            transform: translateY(-5px);
+        }
+        
+        .stage-card h3 {
+            color: #002f6c;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .stage-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .grades-modal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .grade-modal-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .grade-modal-card:hover {
+            background: #e3f2fd;
+            border-color: #2196f3;
+            transform: translateY(-3px);
+        }
+        
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+        
+        .subject-card {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(33,150,243,0.4);
+            color: white;
+        }
+        
+        .subject-card i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .subject-card span {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .welcome-text h2 {
+                font-size: 2rem;
+            }
+            
+            .welcome-text p {
+                font-size: 1.1rem;
+            }
+            
+            .sections-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .grades-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .subjects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-card {
+                padding: 30px 20px;
+            }
+            
+            .welcome-text {
+                padding: 30px 20px;
+            }
+            
+            .grade-card {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>منصة التعليم العراقية</h1>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="#" onclick="openModal('books')"><i class="fas fa-book"></i> الكتب المدرسية</a></li>
+                        <li><a href="#" onclick="openModal('notes')"><i class="fas fa-file-alt"></i> الملازم الدراسية</a></li>
+                        <li><a href="#" onclick="openModal('exams')"><i class="fas fa-question-circle"></i> الأسئلة الوزارية</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section" id="home">
+            <div class="welcome-text">
+                <h2>مرحباً بك في منصة التعليم العراقية</h2>
+                <p>حمّل كتبك وملازمك الدراسية بكل سهولة • جميع المراحل الدراسية من الأول الابتدائي حتى السادس الإعدادي</p>
+            </div>
+            
+            <div class="sections-grid">
+                <div class="section-card" onclick="openModal('books')">
+                    <i class="fas fa-book section-icon"></i>
+                    <h3>الكتب المدرسية</h3>
+                    <p>جميع كتب وزارة التربية العراقية بصيغة PDF</p>
+                    <button class="btn">تصفح الكتب</button>
+                </div>
+                
+                <div class="section-card" onclick="openModal('notes')">
+                    <i class="fas fa-file-alt section-icon"></i>
+                    <h3>الملازم الدراسية</h3>
+                    <p>ملازم محدثة لجميع المواد والصفوف</p>
+                    <button class="btn">تحميل الملازم</button>
+                </div>
+                
+                <div class="section-card" onclick="openModal('exams')">
+                    <i class="fas fa-question-circle section-icon"></i>
+                    <h3>الأسئلة الوزارية</h3>
+                    <p>أسئلة السنوات السابقة مع الحلول النموذجية</p>
+                    <button class="btn">مراجعة الأسئلة</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="levels-section">
+            <h2 class="levels-title">المراحل الدراسية</h2>
+            
+            <div class="level-group">
+                <div class="level-header">
+                    <i class="fas fa-child"></i>
+                    المرحلة الابتدائية
+                </div>
+                <div class="grades-grid">
+                    <div class="grade-card" onclick="goToGrade('1')">
+                        <i class="fas fa-baby grade-icon"></i>
+                        <h4>الصف الأول</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('2')">
+                        <i class="fas fa-child grade-icon"></i>
+                        <h4>الصف الثاني</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('3')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الثالث</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('4')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الرابع</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('5')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الخامس</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('6')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف السادس</h4>
+                        <p>الابتدائي</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level-group">
+                <div class="level-header">
+                    <i class="fas fa-user-friends"></i>
+                    المرحلة المتوسطة
+                </div>
+                <div class="grades-grid">
+                    <div class="grade-card" onclick="goToGrade('7')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الأول</h4>
+                        <p>المتوسط</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('8')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الثاني</h4>
+                        <p>المتوسط</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('9')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الثالث</h4>
+                        <p>المتوسط</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level-group">
+                <div class="level-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    المرحلة الإعدادية
+                </div>
+                <div class="grades-grid">
+                    <div class="grade-card" onclick="goToGrade('10')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الرابع</h4>
+                        <p>الإعدادي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('11')">
+                        <i class="fas fa-user-graduate grade-icon"></i>
+                        <h4>الصف الخامس</h4>
+                        <p>الإعدادي</p>
+                    </div>
+                    <div class="grade-card" onclick="goToGrade('12')">
+                        <i class="fas fa-graduation-cap grade-icon"></i>
+                        <h4>الصف السادس</h4>
+                        <p>الإعدادي</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal للكتب والملازم والأسئلة -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">العنوان</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- المحتوى سيتم إدراجه هنا -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 منصة التعليم العراقية - جميع الحقوق محفوظة</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // بيانات المراحل والصفوف والمواد
+        const educationData = {
+            primary: {
+                name: "المرحلة الابتدائية",
+                grades: {
+                    1: { name: "الصف الأول الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية"] },
+                    2: { name: "الصف الثاني الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية"] },
+                    3: { name: "الصف الثالث الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية", "اللغة الإنجليزية"] },
+                    4: { name: "الصف الرابع الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية", "اللغة الإنجليزية"] },
+                    5: { name: "الصف الخامس الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] },
+                    6: { name: "الصف السادس الابتدائي", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "التربية الفنية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] }
+                }
+            },
+            intermediate: {
+                name: "المرحلة المتوسطة",
+                grades: {
+                    7: { name: "الصف الأول المتوسط", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية", "التربية الفنية"] },
+                    8: { name: "الصف الثاني المتوسط", subjects: ["اللغة العربية", "الرياضيات", "العلوم", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية", "التربية الفنية"] },
+                    9: { name: "الصف الثالث المتوسط", subjects: ["اللغة العربية", "الرياضيات", "الفيزياء", "الكيمياء", "الأحياء", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] }
+                }
+            },
+            secondary: {
+                name: "المرحلة الإعدادية",
+                grades: {
+                    10: { name: "الصف الرابع الإعدادي", subjects: ["اللغة العربية", "الرياضيات", "الفيزياء", "الكيمياء", "الأحياء", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] },
+                    11: { name: "الصف الخامس الإعدادي", subjects: ["اللغة العربية", "الرياضيات", "الفيزياء", "الكيمياء", "الأحياء", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] },
+                    12: { name: "الصف السادس الإعدادي", subjects: ["اللغة العربية", "الرياضيات", "الفيزياء", "الكيمياء", "الأحياء", "التربية الإسلامية", "اللغة الإنجليزية", "التاريخ", "الجغرافية"] }
+                }
+            }
+        };
+
+        let currentModal = '';
+        let currentStage = '';
+
+        // فتح النافذة المنبثقة
+        function openModal(type) {
+            console.log('Opening modal for:', type); // للتشخيص
+            currentModal = type;
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            
+            let title = '';
+            switch(type) {
+                case 'books':
+                    title = '📚 الكتب المدرسية';
+                    break;
+                case 'notes':
+                    title = '📝 الملازم الدراسية';
+                    break;
+                case 'exams':
+                    title = '❓ الأسئلة الوزارية';
+                    break;
+            }
+            
+            modalTitle.textContent = title;
+            modalBody.innerHTML = generateStagesHTML();
+            
+            // إظهار النافذة مع تأثير انتقال
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+            
+            // منع التمرير في الخلفية
+            document.body.style.overflow = 'hidden';
+        }
+
+        // إغلاق النافذة المنبثقة
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('show');
+            
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                currentModal = '';
+                currentStage = '';
+            }, 300);
+        }
+
+        // إنشاء HTML للمراحل
+        function generateStagesHTML() {
+            return `
+                <div class="stages-grid">
+                    <div class="stage-card" onclick="showGrades('primary')">
+                        <h3><i class="fas fa-child"></i> المرحلة الابتدائية</h3>
+                        <p>من الصف الأول إلى السادس الابتدائي</p>
+                        <small style="color: #666;">6 صفوف دراسية</small>
+                    </div>
+                    <div class="stage-card" onclick="showGrades('intermediate')">
+                        <h3><i class="fas fa-user-friends"></i> المرحلة المتوسطة</h3>
+                        <p>من الصف الأول إلى الثالث المتوسط</p>
+                        <small style="color: #666;">3 صفوف دراسية</small>
+                    </div>
+                    <div class="stage-card" onclick="showGrades('secondary')">
+                        <h3><i class="fas fa-graduation-cap"></i> المرحلة الإعدادية</h3>
+                        <p>من الصف الرابع إلى السادس الإعدادي</p>
+                        <small style="color: #666;">3 صفوف دراسية</small>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <p style="color: #666; font-size: 1rem;">
+                        اختر المرحلة الدراسية للوصول إلى ${getModalTypeText()}
+                    </p>
+                </div>
+            `;
+        }
+
+        // عرض الصفوف للمرحلة المحددة
+        function showGrades(stage) {
+            console.log('Showing grades for stage:', stage); // للتشخيص
+            currentStage = stage;
+            const modalBody = document.getElementById('modal-body');
+            const stageData = educationData[stage];
+            
+            let gradesHTML = `
+                <div style="margin-bottom: 25px;">
+                    <button class="back-btn" onclick="goBackToStages()">
+                        <i class="fas fa-arrow-right"></i> العودة للمراحل
+                    </button>
+                </div>
+                <h3 style="text-align: center; color: #002f6c; margin-bottom: 25px; font-size: 1.8rem;">
+                    <i class="fas fa-layer-group"></i> ${stageData.name}
+                </h3>
+                <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1rem;">
+                    اختر الصف الدراسي للوصول إلى ${getModalTypeText()}
+                </p>
+                <div class="grades-modal-grid">
+            `;
+            
+            for (let gradeNum in stageData.grades) {
+                const grade = stageData.grades[gradeNum];
+                gradesHTML += `
+                    <div class="grade-modal-card" onclick="showSubjects('${gradeNum}')">
+                        <i class="fas fa-book-open" style="font-size: 2.2rem; color: #2196f3; margin-bottom: 12px;"></i>
+                        <h4 style="color: #002f6c; margin-bottom: 8px; font-size: 1.2rem;">${grade.name}</h4>
+                        <p style="color: #666; font-size: 0.95rem;">
+                            <i class="fas fa-list"></i> ${grade.subjects.length} مادة دراسية
+                        </p>
+                    </div>
+                `;
+            }
+            
+            gradesHTML += '</div>';
+            modalBody.innerHTML = gradesHTML;
+        }
+
+        // عرض المواد للصف المحدد
+        function showSubjects(gradeNum) {
+            console.log('Showing subjects for grade:', gradeNum); // للتشخيص
+            const modalBody = document.getElementById('modal-body');
+            const grade = educationData[currentStage].grades[gradeNum];
+            
+            let subjectsHTML = `
+                <div style="margin-bottom: 25px;">
+                    <button class="back-btn" onclick="showGrades('${currentStage}')">
+                        <i class="fas fa-arrow-right"></i> العودة للصفوف
+                    </button>
+                    <button class="back-btn" onclick="goBackToStages()">
+                        <i class="fas fa-home"></i> المراحل
+                    </button>
+                </div>
+                <h3 style="text-align: center; color: #002f6c; margin-bottom: 15px; font-size: 1.8rem;">
+                    <i class="fas fa-graduation-cap"></i> ${grade.name}
+                </h3>
+                <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1rem;">
+                    ${getModalTypeText()} - اختر المادة المطلوبة
+                </p>
+                <div class="subjects-grid">
+            `;
+            
+            grade.subjects.forEach(subject => {
+                const icon = getSubjectIcon(subject);
+                subjectsHTML += `
+                    <a href="https://t.me/xd6_bot" target="_blank" class="subject-card" onclick="handleSubjectClick('${subject}', '${grade.name}')">
+                        <i class="${icon}"></i>
+                        <span>${subject}</span>
+                        <small style="display: block; margin-top: 5px; font-size: 0.8rem; opacity: 0.8;">
+                            ${getModalTypeText()}
+                        </small>
+                    </a>
+                `;
+            });
+            
+            subjectsHTML += `
+                </div>
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    <p style="color: #666; margin-bottom: 10px;">
+                        <i class="fab fa-telegram"></i>
+                        عند النقر على أي مادة سيتم توجيهك لبوت التلغرام
+                    </p>
+                    <p style="color: #2196f3; font-weight: 600;">
+                        @xd6_bot
+                    </p>
+                </div>
+            `;
+            modalBody.innerHTML = subjectsHTML;
+        }
+
+        // العودة لعرض المراحل
+        function goBackToStages() {
+            console.log('Going back to stages'); // للتشخيص
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = generateStagesHTML();
+            currentStage = '';
+        }
+
+        // معالجة النقر على المادة
+        function handleSubjectClick(subject, grade) {
+            console.log(`Clicked on ${subject} for ${grade} - ${getModalTypeText()}`);
+            // يمكن إضافة تتبع أو إحصائيات هنا
+        }
+
+        // الحصول على نص نوع المحتوى
+        function getModalTypeText() {
+            switch(currentModal) {
+                case 'books': return 'الكتب المدرسية';
+                case 'notes': return 'الملازم الدراسية';
+                case 'exams': return 'الأسئلة الوزارية';
+                default: return '';
+            }
+        }
+
+        // الحصول على أيقونة المادة
+        function getSubjectIcon(subject) {
+            const icons = {
+                'اللغة العربية': 'fas fa-spell-check',
+                'الرياضيات': 'fas fa-calculator',
+                'العلوم': 'fas fa-flask',
+                'الفيزياء': 'fas fa-atom',
+                'الكيمياء': 'fas fa-vial',
+                'الأحياء': 'fas fa-dna',
+                'التربية الإسلامية': 'fas fa-mosque',
+                'اللغة الإنجليزية': 'fas fa-globe',
+                'التاريخ': 'fas fa-landmark',
+                'الجغرافية': 'fas fa-map',
+                'التربية الفنية': 'fas fa-palette'
+            };
+            return icons[subject] || 'fas fa-book';
+        }
+
+        // الانتقال لصفحة الصف (للاستخدام المستقبلي)
+        function goToGrade(gradeNum) {
+            // يمكن تطوير هذه الوظيفة لاحقاً لعرض صفحة مخصصة لكل صف
+            alert(`سيتم قريباً إضافة صفحة مخصصة للصف رقم ${gradeNum}`);
+        }
+
+        // إغلاق النافذة المنبثقة عند النقر خارجها
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // إضافة دعم للوحة المفاتيح
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // تحسين الأداء والتفاعل
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...'); // للتشخيص
+            
+            // إضافة تأثيرات التمرير السلس
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // إضافة تأثير تحميل للصفحة
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 100);
+
+            // تأكد من أن جميع الأزرار تعمل
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const onClick = this.getAttribute('onclick');
+                    if (onClick) {
+                        eval(onClick);
+                    }
+                });
+            });
+        });
+
+        // إضافة تأثيرات بصرية للتفاعل
+        function addRippleEffect(element, event) {
+            const ripple = document.createElement('span');
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                background-color: rgba(255, 255, 255, 0.3);
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                pointer-events: none;
+            `;
+            
+            element.style.position = 'relative';
+            element.style.overflow = 'hidden';
+            element.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // إضافة CSS للتأثير المائي
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+
+        // تطبيق التأثير على الأزرار والكروت
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.btn, .section-card, .grade-card, .stage-card, .subject-card')) {
+                addRippleEffect(e.target, e);
+            }
+        });
+    </script>
+</body>
+</html>
