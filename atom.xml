@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ملازمي الأفضل</title>
+  <link href="https://ffooaadd.github.io/Mods/" />
+  <updated>2025-06-16T12:00:00+03:00</updated>
+  <id>https://ffooaadd.github.io/Mods/</id>
+  <author>
+    <name>ملازمي</name>
+  </author>
+
+  <entry>
+    <title>تحميل ملزمة الرياضيات - الصف الثالث المتوسط</title>
+    <link href="https://ffooaadd.github.io/Mods/#math-3rd" />
+    <id>https://ffooaadd.github.io/Mods/#math-3rd</id>
+    <updated>2025-06-16T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة الرياضيات - الصف الثالث المتوسط بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل ملزمة الأحياء - الصف السادس الإعدادي</title>
+    <link href="https://ffooaadd.github.io/Mods/#biology-6th" />
+    <id>https://ffooaadd.github.io/Mods/#biology-6th</id>
+    <updated>2025-06-15T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة الأحياء - الصف السادس الإعدادي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل كتاب اللغة الإنجليزية - الصف الرابع الإبتدائي</title>
+    <link href="https://ffooaadd.github.io/Mods/#english-4th" />
+    <id>https://ffooaadd.github.io/Mods/#english-4th</id>
+    <updated>2025-06-14T12:00:00+03:00</updated>
+    <summary>تحميل كتاب اللغة الإنجليزية - الصف الرابع الإبتدائي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل ملزمة الفيزياء - الصف الخامس العلمي</title>
+    <link href="https://ffooaadd.github.io/Mods/#physics-5th" />
+    <id>https://ffooaadd.github.io/Mods/#physics-5th</id>
+    <updated>2025-06-13T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة الفيزياء - الصف الخامس العلمي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل كتاب القواعد - الصف الثاني المتوسط</title>
+    <link href="https://ffooaadd.github.io/Mods/#grammar-2nd" />
+    <id>https://ffooaadd.github.io/Mods/#grammar-2nd</id>
+    <updated>2025-06-12T12:00:00+03:00</updated>
+    <summary>تحميل كتاب القواعد - الصف الثاني المتوسط بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل ملزمة الكيمياء - الصف السادس العلمي</title>
+    <link href="https://ffooaadd.github.io/Mods/#chemistry-6th" />
+    <id>https://ffooaadd.github.io/Mods/#chemistry-6th</id>
+    <updated>2025-06-11T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة الكيمياء - الصف السادس العلمي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل كتاب التاريخ - الصف الثالث المتوسط</title>
+    <link href="https://ffooaadd.github.io/Mods/#history-3rd" />
+    <id>https://ffooaadd.github.io/Mods/#history-3rd</id>
+    <updated>2025-06-10T12:00:00+03:00</updated>
+    <summary>تحميل كتاب التاريخ - الصف الثالث المتوسط بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل ملزمة الجغرافية - الصف الرابع الأدبي</title>
+    <link href="https://ffooaadd.github.io/Mods/#geography-4th" />
+    <id>https://ffooaadd.github.io/Mods/#geography-4th</id>
+    <updated>2025-06-09T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة الجغرافية - الصف الرابع الأدبي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل كتاب العلوم - الصف السادس الإبتدائي</title>
+    <link href="https://ffooaadd.github.io/Mods/#science-6th" />
+    <id>https://ffooaadd.github.io/Mods/#science-6th</id>
+    <updated>2025-06-08T12:00:00+03:00</updated>
+    <summary>تحميل كتاب العلوم - الصف السادس الإبتدائي بصيغة PDF مجاناً.</summary>
+  </entry>
+  <entry>
+    <title>تحميل ملزمة اللغة العربية - الصف الأول المتوسط</title>
+    <link href="https://ffooaadd.github.io/Mods/#arabic-1st" />
+    <id>https://ffooaadd.github.io/Mods/#arabic-1st</id>
+    <updated>2025-06-07T12:00:00+03:00</updated>
+    <summary>تحميل ملزمة اللغة العربية - الصف الأول المتوسط بصيغة PDF مجاناً.</summary>
+  </entry>
+</feed>
